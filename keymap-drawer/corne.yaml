@@ -68,8 +68,8 @@ layers:
   - PAGE DOWN
   - PAGE UP
   - END
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
+  - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
