@@ -12,6 +12,15 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <41 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,10 +33,10 @@
 
             label = "Base";
             bindings = <
-&kp ESC           &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&kp LSHIFT        &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp TAB
-                                &kp LALT  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RIGHT_GUI
+&kp ESC         &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y        &kp U          &kp I          &kp O    &kp P     &kp MINUS
+&kp TAB         &kp A  &kp S  &kp D             &kp F         &kp G          &kp H        &kp J          &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N        &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSLASH
+                              &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp RIGHT_GUI
             >;
         };
 
@@ -40,10 +49,10 @@
 
             label = "Lower";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7    &kp N8  &kp N9     &kp N0            &kp DELETE
-&trans     &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans            &trans
-                           &trans  &trans  &trans    &trans    &mo 3     &trans
+&kp GRAVE  &kp N1  &kp N2    &kp N3         &kp N4      &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0            &kp EQUAL
+&trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP   &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans     &trans  &trans    &trans         &trans      &trans     &trans    &trans    &trans  &trans     &trans            &trans
+                             &trans         &kp DELETE  &trans     &mo 3     &trans    &trans
             >;
         };
 
@@ -56,10 +65,10 @@
 
             label = "Function";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7    &kp F8         &kp F9       &kp F10  &kp F11    &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &kp MINUS  &kp EQUAL
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans         &trans       &trans   &trans     &trans
-                        &trans  &mo 3   &trans    &trans    &trans         &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &mo 3     &trans  &trans  &trans
             >;
         };
 
