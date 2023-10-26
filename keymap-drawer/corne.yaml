@@ -1,7 +1,48 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  Base: [ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, LSHIFT, A, S, D, F, G, H, J, K, L, ;, '''', LEFT CONTROL, Z, X, C, V, B, N, M, ',', ., /, TAB, LALT, Lower, SPACE,
-    RET, Function, RIGHT GUI]
+  Base:
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
+  - TAB
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LEFT SHIFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - \
+  - LEFT CONTROL
+  - LEFT ALT
+  - {t: SPACE, h: Lower}
+  - {t: ENTER, h: Function}
+  - BACKSPACE
+  - RIGHT GUI
   Lower:
   - '`'
   - '1'
@@ -14,13 +55,13 @@ layers:
   - '8'
   - '9'
   - '0'
-  - DELETE
+  - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - HOME
+  - PAGE DOWN
+  - PG UP
+  - END
   - LEFT
   - DOWN
   - UP
@@ -40,10 +81,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - DELETE
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - Config
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Function:
   - F1
@@ -64,12 +105,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - HOME
-  - PAGE DOWN
-  - PAGE UP
-  - END
-  - '-'
-  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -84,9 +126,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Config
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Config:
   - BT CLR
@@ -126,8 +167,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+combos:
+- p: [41, 40]
+  k: DELETE
