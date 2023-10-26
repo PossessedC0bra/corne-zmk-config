@@ -81,7 +81,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - DELETE
+  - {t: ▽, type: trans}
   - {type: held}
   - Config
   - {t: ▽, type: trans}
@@ -127,7 +127,7 @@ layers:
   - {t: ▽, type: trans}
   - Config
   - {type: held}
-  - {t: ▽, type: trans}
+  - DELETE
   - {t: ▽, type: trans}
   Config:
   - BT CLR
@@ -172,6 +172,3 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [41, 40]
-  k: DELETE
