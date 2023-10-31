@@ -4,9 +4,9 @@ on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
   build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     runs-on: ubuntu-latest
     steps:
-      - uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
       - name: Get Next Version
         id: semver
         uses: ietf-tools/semver-action@latest
