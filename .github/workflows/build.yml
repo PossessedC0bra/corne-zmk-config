@@ -12,13 +12,13 @@ jobs:
     steps:
       - name: Get Next Version
         id: semver
-        uses: ietf-tools/semver-action@latest
+        uses: ietf-tools/semver-action@1.5.1
         with:
           token: ${{ github.token }}
           branch: main
 
       - name: Create Release
-        uses: ncipollo/release-action@latest
+        uses: ncipollo/release-action@v1.13.0
         with:
           allowUpdates: true
           draft: false
