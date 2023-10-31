@@ -15,7 +15,9 @@ jobs:
         uses: ietf-tools/semver-action@v1.5.1
         with:
           token: ${{ github.token }}
-          branch: main
+          branch: master
+          noVersionBumpBehavior: current
+
 
       - name: Create Release
         uses: ncipollo/release-action@v1.13.0
