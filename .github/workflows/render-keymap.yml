@@ -16,3 +16,4 @@ jobs:
       keymap_patterns: "config/*.keymap"
       config_path: "keymap-drawer/config.yml"
       output_folder: "keymap-drawer"
+      amend_commit: true
