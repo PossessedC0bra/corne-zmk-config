@@ -15,7 +15,7 @@ jobs:
         uses: ietf-tools/semver-action@v1.5.1
         with:
           token: ${{ github.token }}
-          branch: master
+          branch: main
           noVersionBumpBehavior: current
 
 
