@@ -1,5 +1,29 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build keymap
+
+on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+      - name: Get Next Version
+        id: semver
+        uses: ietf-tools/semver-action@latest
+        with:
+          token: ${{ github.token }}
+          branch: main
+
+      - name: Create Release
+        uses: ncipollo/release-action@latest
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: ${{ steps.semver.outputs.next }}
+          body: |
+            # Corne Keymap - ${{ steps.semver.outputs.next }}
+          token: ${{ github.token }}
+          artifacts: |
+            build/artifacts/*.zip
+            keymap-drawer/*.svg
