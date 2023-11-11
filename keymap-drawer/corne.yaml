@@ -4,35 +4,35 @@ layers:
   - ESC
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
   - '-'
   - LEFT SHIFT
   - A
+  - R
   - S
-  - D
-  - F
+  - T
   - G
-  - H
-  - J
-  - K
-  - L
-  - ;
+  - M
+  - N
+  - E
+  - I
+  - O
   - ''''
   - TAB
   - Z
   - X
   - C
+  - D
   - V
-  - B
-  - N
-  - M
+  - K
+  - H
   - ','
   - .
   - /
