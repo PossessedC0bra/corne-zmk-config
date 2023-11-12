@@ -19,20 +19,31 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
             // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-            label = "Base";
+            label = "QWERTY";
             bindings = <
 &kp ESC         &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y        &kp U          &kp I          &kp O    &kp P     &kp MINUS
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D             &kp F         &kp G          &kp H        &kp J          &kp K          &kp L    &kp SEMI  &kp SQT
 &kp TAB         &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N        &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp BACKSLASH
-                              &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 SPACE    &lt 2 ENTER  &kp BACKSPACE  &kp RIGHT_GUI
+                              &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 2 SPACE    &lt 3 ENTER  &kp BACKSPACE  &kp RIGHT_GUI
             >;
+        };
+
+        colemak_dh_layer {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp F      &kp P     &kp B          &kp J         &kp L     &kp U      &kp Y    &kp SEMI  &kp MINUS
+&kp LSHFT  &kp A  &kp R  &kp S      &kp T     &kp G          &kp M         &kp N     &kp E      &kp I    &kp O     &kp APOS
+&kp TAB    &kp Z  &kp X  &kp C      &kp V     &kp D          &kp K         &kp H     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                         &kp LCTRL  &kp LALT  &lt 2 SPACE    &lt 3 RETURN  &kp BSPC  &kp RGUI
+            >;
+
+            label = "Colemak-DH";
         };
 
         lower_layer {
@@ -47,7 +58,7 @@
 &kp GRAVE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0            &kp EQUAL
 &trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
 &trans     &trans  &trans    &trans         &trans     &trans     &trans    &trans    &trans  &trans     &trans            &trans
-                             &trans         &trans     &trans     &mo 3     &trans    &trans
+                             &trans         &trans     &trans     &mo 4     &trans    &trans
             >;
         };
 
@@ -63,7 +74,7 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8      &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
-                        &trans  &trans  &mo 3     &trans  &kp DELETE  &trans
+                        &trans  &trans  &mo 4     &trans  &kp DELETE  &trans
             >;
         };
 
@@ -71,7 +82,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&tog 0      &tog 1        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
