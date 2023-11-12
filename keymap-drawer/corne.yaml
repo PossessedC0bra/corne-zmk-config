@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '-'
-  - LEFT SHIFT
+  - LSHIFT
   - A
   - S
   - D
@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - \
-  - LEFT CONTROL
-  - LEFT ALT
+  - LCTRL
+  - LALT
   - {t: SPACE, h: Lower}
-  - {t: ENTER, h: Function}
-  - BACKSPACE
-  - RIGHT GUI
+  - {t: RETURN, h: Function}
+  - BSPC
+  - RGUI
   Colemak-DH:
   - ESC
   - Q
