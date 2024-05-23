@@ -16,6 +16,9 @@ svg.keymap {
 /* default key styling */
 rect.key {
     fill: #f6f8fa;
+}
+
+rect.key, rect.combo {
     stroke: #c9cccf;
     stroke-width: 1;
 }
@@ -51,7 +54,16 @@ text.label {
     font-weight: bold;
     text-anchor: start;
     stroke: white;
-    stroke-width: 2;
+    stroke-width: 4;
+    paint-order: stroke;
+}
+
+/* styling for optional footer */
+text.footer {
+    text-anchor: end;
+    dominant-baseline: auto;
+    stroke: white;
+    stroke-width: 4;
     paint-order: stroke;
 }
 
@@ -99,9 +111,20 @@ path.combo {
     visibility: hidden;
 }
 /* End Tabler Icons Cleanup */
-</style>
-<g transform="translate(30, 0)" class="layer-QWERTY">
-<text x="0" y="28" class="label">QWERTY:</text>
+
+@media (prefers-color-scheme: dark) {
+svg.keymap { fill: #d1d6db; }
+rect.key { fill: #3f4750; }
+rect.key, rect.combo { stroke: #60666c; }
+rect.combo, rect.combo-separate { fill: #1f3d7a; }
+rect.held, rect.combo.held { fill: #854747; }
+text.label, text.footer { stroke: black; }
+text.trans { fill: #7e8184; }
+path.combo { stroke: #7f7f7f; }
+
+}</style>
+<g transform="translate(30, 0)" class="layer-qwerty">
+<text x="0" y="28" class="label">qwerty:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -258,12 +281,12 @@ path.combo {
 <g transform="translate(349, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="38" class="key hold">Lower</text>
+<text x="0" y="38" class="key hold">lower</text>
 </g>
 <g transform="translate(491, 224) rotate(-30.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">RETURN</text>
-<text x="0" y="38" class="key hold"><tspan style="font-size: 88%">Function</tspan></text>
+<text x="0" y="38" class="key hold"><tspan style="font-size: 88%">function</tspan></text>
 </g>
 <g transform="translate(556, 212) rotate(-15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -275,8 +298,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 330)" class="layer-Colemak-DH">
-<text x="0" y="28" class="label">Colemak-DH:</text>
+<g transform="translate(30, 330)" class="layer-colemak_dh">
+<text x="0" y="28" class="label">colemak_dh:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -372,7 +395,7 @@ path.combo {
 </g>
 <g transform="translate(812, 105)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">.</text>
+<text x="0" y="0" class="key tap">&#x27;</text>
 </g>
 <g transform="translate(28, 161)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -433,12 +456,12 @@ path.combo {
 <g transform="translate(349, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="38" class="key hold">Lower</text>
+<text x="0" y="38" class="key hold">lower</text>
 </g>
 <g transform="translate(491, 224) rotate(-30.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">RETURN</text>
-<text x="0" y="38" class="key hold"><tspan style="font-size: 88%">Function</tspan></text>
+<text x="0" y="38" class="key hold"><tspan style="font-size: 88%">function</tspan></text>
 </g>
 <g transform="translate(556, 212) rotate(-15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -450,8 +473,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 661)" class="layer-Lower">
-<text x="0" y="28" class="label">Lower:</text>
+<g transform="translate(30, 661)" class="layer-lower">
+<text x="0" y="28" class="label">lower:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -614,7 +637,7 @@ path.combo {
 </g>
 <g transform="translate(491, 224) rotate(-30.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
-<text x="0" y="0" class="key tap">Config</text>
+<text x="0" y="0" class="key tap">config</text>
 </g>
 <g transform="translate(556, 212) rotate(-15.0)" class="key trans keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -626,8 +649,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 991)" class="layer-Function">
-<text x="0" y="28" class="label">Function:</text>
+<g transform="translate(30, 991)" class="layer-function">
+<text x="0" y="28" class="label">function:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -783,7 +806,7 @@ path.combo {
 </g>
 <g transform="translate(349, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
-<text x="0" y="0" class="key tap">Config</text>
+<text x="0" y="0" class="key tap">config</text>
 </g>
 <g transform="translate(491, 224) rotate(-30.0)" class="key held keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
@@ -798,8 +821,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 1321)" class="layer-Config">
-<text x="0" y="28" class="label">Config:</text>
+<g transform="translate(30, 1321)" class="layer-config">
+<text x="0" y="28" class="label">config:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -906,11 +929,13 @@ path.combo {
 </g>
 <g transform="translate(28, 161)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">QWERTY</text>
+<text x="0" y="0" class="key tap">qwerty</text>
+<text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(84, 161)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">Colemak-DH</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">colemak_dh</tspan></text>
+<text x="0" y="24" class="key hold">toggle</text>
 </g>
 <g transform="translate(140, 147)" class="key trans keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -976,4 +1001,4 @@ path.combo {
 </g>
 </g>
 </g>
-</svg>
+<text x="870.0" y="1679.0" class="footer">Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a></text></svg>
