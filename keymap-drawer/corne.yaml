@@ -14,16 +14,16 @@ layers:
   - P
   - '-'
   - LSHIFT
-  - A
-  - S
-  - D
-  - F
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHIFT}
   - G
   - H
-  - J
-  - K
-  - L
-  - ;
+  - {t: J, h: RSHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
   - ''''
   - TAB
   - Z
@@ -57,16 +57,16 @@ layers:
   - ;
   - '-'
   - LSHFT
-  - A
-  - R
-  - S
-  - T
+  - {t: A, h: LGUI}
+  - {t: R, h: LALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LSHIFT}
   - G
   - M
-  - N
-  - E
-  - I
-  - O
+  - {t: N, h: RSHIFT}
+  - {t: E, h: RCTRL}
+  - {t: I, h: RALT}
+  - {t: O, h: RGUI}
   - ''''
   - TAB
   - Z
