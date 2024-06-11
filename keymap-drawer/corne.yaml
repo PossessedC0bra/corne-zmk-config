@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  qwerty:
+  QWERTY:
   - ESC
   - Q
   - W
@@ -39,11 +39,11 @@ layers:
   - \
   - LCTRL
   - LALT
-  - {t: SPACE, h: lower}
-  - {t: RETURN, h: function}
+  - {t: SPACE, h: Lower}
+  - {t: RETURN, h: Function}
   - BSPC
   - RGUI
-  colemak_dh:
+  Colemak-DH:
   - ESC
   - Q
   - W
@@ -82,11 +82,11 @@ layers:
   - \
   - LCTRL
   - LALT
-  - {t: SPACE, h: lower}
-  - {t: RETURN, h: function}
+  - {t: SPACE, h: Lower}
+  - {t: RETURN, h: Function}
   - BSPC
   - RGUI
-  lower:
+  Lower:
   - '`'
   - '1'
   - '2'
@@ -126,10 +126,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - config
+  - Config
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  function:
+  Function:
   - F1
   - F2
   - F3
@@ -168,11 +168,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - config
+  - Config
   - {type: held}
   - DELETE
   - {t: ▽, type: trans}
-  config:
+  Config:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -197,8 +197,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: qwerty, h: toggle}
-  - {t: colemak_dh, h: toggle}
+  - {t: QWERTY, h: toggle}
+  - {t: Colemak-DH, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
