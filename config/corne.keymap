@@ -32,22 +32,11 @@
 
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q       &kp W       &kp E        &kp R         &kp T          &kp Y         &kp U         &kp I        &kp O       &kp P          &kp MINUS
-&kp LSHIFT  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G          &kp H         &mt RSHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &kp SQT
-&kp TAB     &kp Z       &kp X       &kp C        &kp V         &kp B          &kp N         &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BACKSLASH
-                                    &kp LCTRL    &kp LALT      &lt 2 SPACE    &lt 3 RETURN  &kp BSPC      &kp RGUI
+&kp TAB    &kp Q       &kp W       &kp E        &kp R         &kp T          &kp Y         &kp U         &kp I        &kp O       &kp P          &kp MINUS
+&kp ESC    &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F  &kp G          &kp H         &mt RSHIFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z       &kp X       &kp C        &kp V         &kp B          &kp N         &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp BACKSLASH
+                                   &kp TAB      &kp DELETE    &lt 1 SPACE    &lt 3 RETURN  &kp BSPC      &caps_word
             >;
-        };
-
-        colemak_dh_layer {
-            bindings = <
-&kp ESC    &kp Q       &kp W       &kp F        &kp P         &kp B          &kp J         &kp L         &kp U        &kp Y       &kp SEMI    &kp MINUS
-&kp LSHFT  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHIFT T  &kp G          &kp M         &mt RSHIFT N  &mt RCTRL E  &mt RALT I  &mt RGUI O  &kp APOS
-&kp TAB    &kp Z       &kp X       &kp C        &kp V         &kp D          &kp K         &kp H         &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
-                                   &kp LCTRL    &kp LALT      &lt 2 SPACE    &lt 3 RETURN  &kp BSPC      &kp RGUI
-            >;
-
-            display-name = "Colemak-DH";
         };
 
         lower_layer {
@@ -59,11 +48,22 @@
 
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0            &kp EQUAL
-&trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &trans  &trans    &trans         &trans     &trans     &trans    &trans    &trans  &trans     &trans            &trans
-                             &trans         &trans     &trans     &mo 4     &trans    &trans
+&kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &kp N6      &kp N7    &kp N8         &kp N9     &kp N0     &kp EQUAL
+&none      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp CAPS    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none
+&none      &none     &none     &none      &none      &none     &kp INSERT  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
+                               &none      &none      &none     &mo 4       &none     &none
             >;
+        };
+
+        symbol_layer {
+            bindings = <
+&trans  &kp EXCL     &kp AT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &trans  &trans     &trans     &trans    &trans         &trans
+&trans  &kp HASH     &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RIGHT_GUI  &trans
+&trans  &kp PERCENT  &kp CARET   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE    &trans  &trans     &trans     &trans    &trans         &trans
+                                 &trans                &trans                 &trans       &trans  &trans     &trans
+            >;
+
+            label = "Symbols";
         };
 
         function_layer {
@@ -75,10 +75,10 @@
 
             display-name = "Function";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8      &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
-                        &trans  &trans  &mo 4     &trans  &kp DELETE  &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &mo 4     &trans  &none   &trans
             >;
         };
 
@@ -86,7 +86,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&tog 0      &tog 1        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&tog 0      &tog 0        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
