@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
-  - ESC
+  - TAB
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '-'
-  - LSHIFT
+  - ESC
   - {t: A, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LCTRL}
@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RALT}
   - {t: ;, h: RGUI}
   - ''''
-  - TAB
+  - LSHFT
   - Z
   - X
   - C
@@ -37,55 +37,12 @@ layers:
   - .
   - /
   - \
-  - LCTRL
-  - LALT
-  - {t: SPACE, h: Lower}
-  - {t: RETURN, h: Function}
-  - BSPC
-  - RGUI
-  Colemak-DH:
-  - ESC
-  - Q
-  - W
-  - F
-  - P
-  - B
-  - J
-  - L
-  - U
-  - Y
-  - ;
-  - '-'
-  - LSHFT
-  - {t: A, h: LGUI}
-  - {t: R, h: LALT}
-  - {t: S, h: LCTRL}
-  - {t: T, h: LSHIFT}
-  - G
-  - M
-  - {t: N, h: RSHIFT}
-  - {t: E, h: RCTRL}
-  - {t: I, h: RALT}
-  - {t: O, h: RGUI}
-  - ''''
   - TAB
-  - Z
-  - X
-  - C
-  - V
-  - D
-  - K
-  - H
-  - ','
-  - .
-  - /
-  - \
-  - LCTRL
-  - LALT
+  - DELETE
   - {t: SPACE, h: Lower}
   - {t: RETURN, h: Function}
   - BSPC
-  - RGUI
+  - '&caps_word'
   Lower:
   - '`'
   - '1'
@@ -99,34 +56,77 @@ layers:
   - '9'
   - '0'
   - '='
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - PAGE DOWN
-  - PG UP
-  - END
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - CAPS
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - '['
-  - ']'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - INSERT
+  - HOME
+  - PAGE DOWN
+  - PG UP
+  - END
+  - ''
+  - ''
+  - ''
   - {type: held}
   - Config
+  - ''
+  - ''
+  symbol:
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '{'
+  - '}'
+  - '|'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '#'
+  - $
+  - (
+  - )
+  - '`'
+  - {t: ▽, type: trans}
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RIGHT GUI
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '%'
+  - ^
+  - '['
+  - ']'
+  - '~'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Function:
@@ -170,7 +170,7 @@ layers:
   - {t: ▽, type: trans}
   - Config
   - {type: held}
-  - DELETE
+  - ''
   - {t: ▽, type: trans}
   Config:
   - BT CLR
@@ -198,7 +198,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: QWERTY, h: toggle}
-  - {t: Colemak-DH, h: toggle}
+  - {t: QWERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
