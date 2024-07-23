@@ -14,16 +14,16 @@ layers:
   - P
   - '-'
   - ESC
-  - {t: A, h: LGUI, type: ghost}
-  - {t: S, h: LALT, type: ghost}
-  - {t: D, h: LCTRL, type: ghost}
-  - {t: F, h: LSHIFT, type: ghost}
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHIFT}
   - G
   - H
-  - {t: J, h: RSHIFT, type: ghost}
-  - {t: K, h: RCTRL, type: ghost}
-  - {t: L, h: RALT, type: ghost}
-  - {t: ;, h: RGUI, type: ghost}
+  - {t: J, h: RSHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: ;, h: RGUI}
   - ''''
   - LSHFT
   - Z
