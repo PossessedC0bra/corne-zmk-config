@@ -53,11 +53,22 @@
 
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y         &kp U          &kp I         &kp O        &kp P           &kp MINUS
-&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-&kp LSHFT  &kp Z        &kp X        &kp C         &kp V          &kp B          &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
-                                     &kp TAB       &kp DELETE     &lt 1 SPACE    &lt 3 RETURN  &kp BSPC       &caps_word
+&kp TAB    &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y         &kp U            &kp I         &kp O        &kp P           &kp MINUS
+&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H         &hmr RSHIFT J    &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z        &kp X        &kp C         &kp V          &kp B          &kp N         &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
+                                     &kp TAB       &lt 2 DEL      &lt 1 SPACE    &lt 3 RETURN  &lt 4 BACKSPACE  &caps_word
             >;
+        };
+
+        number_layer {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &kp N0  &kp N1  &kp N2  &kp N3  &trans  &trans
+                            &trans     &trans     &trans    &trans  &trans  &trans
+            >;
+
+            label = "Numbers";
         };
 
         lower_layer {
@@ -72,7 +83,7 @@
 &kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5    &kp N6      &kp N7    &kp N8         &kp N9     &kp N0     &kp EQUAL
 &none      &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none     &kp CAPS    &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none
 &none      &none     &none     &none      &none      &none     &kp INSERT  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
-                               &none      &none      &none     &mo 6       &none     &none
+                               &none      &none      &none     &mo 5       &none     &none
             >;
         };
 
@@ -88,33 +99,6 @@
         };
 
         function_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Function";
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
-&none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none
-                        &none   &none   &mo 6     &none   &none   &none
-            >;
-        };
-
-        number_layer {
-            bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &kp N0  &kp N1  &kp N2  &kp N3  &trans  &trans
-                            &trans     &trans     &trans    &trans  &trans  &trans
-            >;
-
-            label = "Numbers";
-        };
-
-        functionkp_layer {
             bindings = <
 &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
