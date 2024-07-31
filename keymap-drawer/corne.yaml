@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - \
-  - TAB
-  - {t: DEL, h: Lower}
+  - '&caps_word'
+  - {t: TAB, h: Lower}
   - {t: SPACE, h: number}
   - {t: RETURN, h: symbol}
   - {t: BACKSPACE, h: function}
-  - '&caps_word'
+  - DEL
   number:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
