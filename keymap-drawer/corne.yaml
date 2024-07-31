@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
-  - TAB
+  - '`'
   - Q
   - W
   - E
@@ -38,66 +38,23 @@ layers:
   - /
   - \
   - '&caps_word'
-  - {t: TAB, h: Lower}
-  - {t: SPACE, h: number}
+  - {t: TAB, h: number}
+  - {t: SPACE, h: navigation}
   - {t: RETURN, h: symbol}
   - {t: BACKSPACE, h: function}
-  - DEL
-  number:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LGUI
-  - LALT
-  - LCTRL
-  - LSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - '1'
-  - '2'
-  - '3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Lower:
-  - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: DEL, h: Config}
+  navigation:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctl+ Z
+  - Ctl+ X
+  - Ctl+ C
+  - Ctl+ 9
+  - Ctl+ Y
   - '='
   - ''
   - LGUI
@@ -123,12 +80,55 @@ layers:
   - PG UP
   - END
   - ''
+  - '&caps_word'
+  - TAB
+  - {t: SPACE, type: held}
+  - RET
+  - BACKSPACE
+  - DEL
+  number:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - '='
+  - {t: ▽, type: trans}
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
-  - Config
-  - ''
-  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - {t: ▽, type: trans}
+  - '&caps_word'
+  - {t: TAB, type: held}
+  - SPACE
+  - RET
+  - BACKSPACE
+  - DEL
   symbol:
   - ''
   - '!'
@@ -166,12 +166,12 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
+  - '&caps_word'
+  - TAB
+  - SPACE
+  - {t: ENTER, type: held}
+  - BSPC
+  - DEL
   function:
   - {t: ▽, type: trans}
   - F7
@@ -209,12 +209,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+  - '&caps_word'
+  - TAB
+  - SPACE
+  - ENTER
+  - {t: BSPC, type: held}
+  - DEL
   Config:
   - BT CLR
   - {t: BT, h: '0'}
@@ -253,8 +253,8 @@ layers:
   - ''
   - ''
   - ''
-  - {type: held}
+  - ''
+  - ''
+  - ''
   - ''
   - {type: held}
-  - ''
-  - ''
