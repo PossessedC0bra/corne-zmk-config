@@ -69,9 +69,9 @@
 
             display-name = "Lower";
             bindings = <
-&none  &none     &none     &none       &none      &none        &kp LC(Z)   &kp LC(X)      &kp LC(C)      &kp LC(N9)  &kp LC(Y)  &kp EQUAL
-&none  &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT  &none        &kp CAPS    &kp LEFT       &kp DOWN       &kp UP      &kp RIGHT  &none
-&none  &none     &none     &none       &none      &none        &kp INSERT  &kp HOME       &kp PAGE_DOWN  &kp PG_UP   &kp END    &none
+&none  &kp N1    &kp N2    &kp N3      &kp N4     &kp N5       &kp N6      &kp N7         &kp N8         &kp N9     &kp N0     &kp EQUAL
+&none  &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT  &none        &kp CAPS    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
+&none  &none     &none     &none       &none      &none        &kp INSERT  &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
                            &caps_word  &kp TAB    &kp SPACE    &kp RET     &kp BACKSPACE  &kp DEL
             >;
 
