@@ -43,7 +43,7 @@ layers:
   - {t: RETURN, h: symbol}
   - {t: BACKSPACE, h: function}
   - {t: DEL, h: Config}
-  Colemak_DH_Layer:
+  colemak_dh:
   - '`'
   - Q
   - W
@@ -283,7 +283,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: Colemak_DH_Layer, h: toggle}
+  - {t: colemak_dh, h: toggle}
   - ''
   - ''
   - ''
