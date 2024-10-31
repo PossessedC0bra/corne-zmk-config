@@ -15,4 +15,5 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"
       config_path: "keymap-drawer/config.yml"
+      draw_args: "corne:'--ghost-keys 13 14 15 16 19 20 21 22'"
       output_folder: "keymap-drawer"

@@ -53,25 +53,25 @@
 
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y         &kp U          &kp I         &kp O        &kp P           &kp MINUS
-&kp LSHIFT  &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H         &hmr RSHIFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
-&kp TAB     &kp Z        &kp X        &kp C         &kp V          &kp B          &kp N         &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
-                                      &kp LCTRL     &kp LALT       &lt 2 SPACE    &lt 3 RETURN  &kp BSPC       &kp RGUI
+&kp GRAVE  &kp Q        &kp W        &kp E         &kp R          &kp T          &kp Y         &kp U            &kp I         &kp O        &kp P           &kp MINUS
+&kp ESC    &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHIFT F  &kp G          &kp H         &hmr RSHIFT J    &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI  &kp SQT
+&kp LSHFT  &kp Z        &kp X        &kp C         &kp V          &kp B          &kp N         &kp M            &kp COMMA     &kp DOT      &kp FSLH        &kp BACKSLASH
+                                     &caps_word    &lt 3 TAB      &lt 2 SPACE    &lt 4 RETURN  &lt 5 BACKSPACE  &lt 6 DEL
             >;
         };
 
         colemak_dh_layer {
             bindings = <
-&kp ESC    &kp Q        &kp W        &kp F         &kp P          &kp B          &kp J         &kp L          &kp U         &kp Y        &kp SEMI     &kp MINUS
-&kp LSHFT  &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G          &kp M         &hmr RSHIFT N  &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp APOS
-&kp TAB    &kp Z        &kp X        &kp C         &kp V          &kp D          &kp K         &kp H          &kp COMMA     &kp DOT      &kp FSLH     &kp BSLH
-                                     &kp LCTRL     &kp LALT       &lt 2 SPACE    &lt 3 RETURN  &kp BSPC       &kp RGUI
+&kp GRAVE  &kp Q        &kp W        &kp F         &kp P          &kp B          &kp J         &kp L            &kp U         &kp Y        &kp SEMI     &kp MINUS
+&kp ESC    &hml LGUI A  &hml LALT R  &hml LCTRL S  &hml LSHIFT T  &kp G          &kp M         &hmr RSHIFT N    &hmr RCTRL E  &hmr RALT I  &hmr RGUI O  &kp APOS
+&kp LSHFT  &kp Z        &kp X        &kp C         &kp D          &kp V          &kp K         &kp H            &kp COMMA     &kp DOT      &kp FSLH     &kp BSLH
+                                     &caps_word    &lt 3 TAB      &lt 2 SPACE    &lt 4 RETURN  &lt 5 BACKSPACE  &lt 6 DELETE
             >;
 
-            display-name = "Colemak-DH";
+            label = "Colemak DH";
         };
 
-        lower_layer {
+        navigation_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -80,35 +80,54 @@
 
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2    &kp N3         &kp N4     &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0            &kp EQUAL
-&trans     &trans  &kp HOME  &kp PAGE_DOWN  &kp PG_UP  &kp END    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans     &trans  &trans    &trans         &trans     &trans     &trans    &trans    &trans  &trans     &trans            &trans
-                             &trans         &trans     &trans     &mo 4     &trans    &trans
+&none  &kp N1    &kp N2    &kp N3      &kp N4     &kp N5       &kp N6      &kp N7         &kp N8         &kp N9     &kp N0     &kp EQUAL
+&none  &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT  &none        &kp CAPS    &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT  &none
+&none  &none     &none     &none       &none      &none        &kp INSERT  &kp HOME       &kp PAGE_DOWN  &kp PG_UP  &kp END    &none
+                           &caps_word  &kp TAB    &kp SPACE    &kp RET     &kp BACKSPACE  &kp DEL
             >;
+
+            label = "Navigation";
+        };
+
+        number_layer {
+            bindings = <
+&none  &none     &none     &none       &none      &none        &none    &kp N7         &kp N8   &kp N9  &none   &kp EQUAL
+&none  &kp LGUI  &kp LALT  &kp LCTRL   &kp LSHFT  &none        &none    &kp N4         &kp N5   &kp N6  &none   &none
+&none  &none     &none     &none       &none      &none        &none    &kp N1         &kp N2   &kp N3  &kp N0  &none
+                           &caps_word  &kp TAB    &kp SPACE    &kp RET  &kp BACKSPACE  &kp DEL
+            >;
+
+            label = "Numbers";
+        };
+
+        symbol_layer {
+            bindings = <
+&none  &kp EXCL     &kp AT      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &none      &none      &none      &none     &none          &none
+&none  &kp HASH     &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE    &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RIGHT_GUI  &none
+&none  &kp PERCENT  &kp CARET   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE    &none      &none      &none      &none     &none          &none
+                                &caps_word            &kp TAB                &kp SPACE    &kp ENTER  &kp BSPC   &kp DEL
+            >;
+
+            label = "Symbols";
         };
 
         function_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            display-name = "Function";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8      &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans   &trans   &trans
-                        &trans  &trans  &mo 4     &trans  &kp DELETE  &trans
+&none  &kp F7  &kp F8  &kp F9      &kp F12  &none        &none      &none      &none      &none     &none     &none
+&none  &kp F4  &kp F5  &kp F6      &kp F11  &none        &none      &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none
+&none  &kp F1  &kp F2  &kp F3      &kp F10  &none        &none      &none      &none      &none     &none     &none
+                       &caps_word  &kp TAB  &kp SPACE    &kp ENTER  &kp BSPC   &kp DEL
             >;
+
+            label = "Function";
         };
 
         config_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&tog 0      &tog 1        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans        &trans        &trans          &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+&tog 1      &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
+                                        &none         &none         &none           &none  &none  &none
             >;
 
             display-name = "Config";

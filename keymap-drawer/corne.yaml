@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
-  - ESC
+  - '`'
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '-'
-  - LSHIFT
+  - ESC
   - {t: A, h: LGUI}
   - {t: S, h: LALT}
   - {t: D, h: LCTRL}
@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RALT}
   - {t: ;, h: RGUI}
   - ''''
-  - TAB
+  - LSHFT
   - Z
   - X
   - C
@@ -37,14 +37,14 @@ layers:
   - .
   - /
   - \
-  - LCTRL
-  - LALT
-  - {t: SPACE, h: Lower}
-  - {t: RETURN, h: Function}
-  - BSPC
-  - RGUI
-  Colemak-DH:
-  - ESC
+  - '&caps_word'
+  - {t: TAB, h: number}
+  - {t: SPACE, h: navigation}
+  - {t: RETURN, h: symbol}
+  - {t: BACKSPACE, h: function}
+  - {t: DEL, h: Config}
+  colemak_dh:
+  - '`'
   - Q
   - W
   - F
@@ -56,7 +56,7 @@ layers:
   - Y
   - ;
   - '-'
-  - LSHFT
+  - ESC
   - {t: A, h: LGUI}
   - {t: R, h: LALT}
   - {t: S, h: LCTRL}
@@ -68,26 +68,26 @@ layers:
   - {t: I, h: RALT}
   - {t: O, h: RGUI}
   - ''''
-  - TAB
+  - LSHFT
   - Z
   - X
   - C
-  - V
   - D
+  - V
   - K
   - H
   - ','
   - .
   - /
   - \
-  - LCTRL
-  - LALT
-  - {t: SPACE, h: Lower}
-  - {t: RETURN, h: Function}
-  - BSPC
-  - RGUI
-  Lower:
-  - '`'
+  - '&caps_word'
+  - {t: TAB, h: number}
+  - {t: SPACE, h: navigation}
+  - {t: RETURN, h: symbol}
+  - {t: BACKSPACE, h: function}
+  - {t: DELETE, h: Config}
+  navigation:
+  - ''
   - '1'
   - '2'
   - '3'
@@ -99,79 +99,165 @@ layers:
   - '9'
   - '0'
   - '='
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - PAGE DOWN
-  - PG UP
-  - END
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - CAPS
   - LEFT
   - DOWN
   - UP
   - RIGHT
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - INSERT
+  - HOME
+  - PAGE DOWN
+  - PG UP
+  - END
+  - ''
+  - '&caps_word'
+  - TAB
+  - {t: SPACE, type: held}
+  - RET
+  - BACKSPACE
+  - DEL
+  number:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - '='
+  - ''
+  - LGUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - ''
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - ''
+  - '&caps_word'
+  - {t: TAB, type: held}
+  - SPACE
+  - RET
+  - BACKSPACE
+  - DEL
+  symbol:
+  - ''
+  - '!'
+  - '@'
+  - '{'
+  - '}'
+  - '|'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '#'
+  - $
+  - (
+  - )
+  - '`'
+  - ''
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RIGHT GUI
+  - ''
+  - ''
+  - '%'
+  - ^
   - '['
   - ']'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - Config
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Function:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
+  - '~'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&caps_word'
+  - TAB
+  - SPACE
+  - {t: ENTER, type: held}
+  - BSPC
+  - DEL
+  function:
+  - ''
   - F7
   - F8
   - F9
-  - F10
-  - F11
   - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Config
-  - {type: held}
-  - DELETE
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F4
+  - F5
+  - F6
+  - F11
+  - ''
+  - ''
+  - RSHFT
+  - RCTRL
+  - RALT
+  - RGUI
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F10
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&caps_word'
+  - TAB
+  - SPACE
+  - ENTER
+  - {t: BSPC, type: held}
+  - DEL
   Config:
   - BT CLR
   - {t: BT, h: '0'}
@@ -179,39 +265,39 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: QWERTY, h: toggle}
-  - {t: Colemak-DH, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: colemak_dh, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
