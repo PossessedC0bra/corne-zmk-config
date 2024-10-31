@@ -43,6 +43,49 @@ layers:
   - {t: RETURN, h: symbol}
   - {t: BACKSPACE, h: function}
   - {t: DEL, h: Config}
+  Colemak_DH_Layer:
+  - '`'
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - '-'
+  - ESC
+  - {t: A, h: LGUI}
+  - {t: R, h: LALT}
+  - {t: S, h: LCTRL}
+  - {t: T, h: LSHIFT}
+  - G
+  - M
+  - {t: N, h: RSHIFT}
+  - {t: E, h: RCTRL}
+  - {t: I, h: RALT}
+  - {t: O, h: RGUI}
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - \
+  - '&caps_word'
+  - {t: TAB, h: number}
+  - {t: SPACE, h: navigation}
+  - {t: RETURN, h: symbol}
+  - {t: BACKSPACE, h: function}
+  - {t: DELETE, h: Config}
   navigation:
   - ''
   - '1'
@@ -240,7 +283,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {t: Colemak_DH_Layer, h: toggle}
   - ''
   - ''
   - ''
